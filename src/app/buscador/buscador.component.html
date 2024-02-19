@@ -1,0 +1,26 @@
+<!-- Asegúrate de importar los módulos necesarios en tu app.module.ts -->
+<div class="buscador-container">
+  <h1>Busca una película</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Buscar películas</mat-label>
+    <input matInput [formControl]="searchControl">
+  </mat-form-field>
+</div>
+
+
+<div class="results-container">
+  <div *ngFor="let pelicula of resultados.results" class="result-card">
+    <a [routerLink]="['/detalles', pelicula.id]">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ pelicula.title }}</mat-card-title>
+          <mat-card-subtitle>Fecha de lanzamiento: {{ pelicula.release_date | date }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="'https://image.tmdb.org/t/p/w500' + pelicula.poster_path" alt="Póster de {{ pelicula.title }}">
+        <mat-card-content>
+          <p>{{ pelicula.overview | slice:0:150 }}...</p>
+        </mat-card-content>
+      </mat-card>
+    </a>
+  </div>
+</div>

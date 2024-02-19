@@ -1,0 +1,81 @@
+/* src/app/buscador/buscador.component.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh; /* Asegura que el contenedor tenga al menos la altura de la ventana */
+}
+
+h1 {
+  margin-bottom: 1rem; /* Agrega un margen debajo del título si es necesario */
+}
+
+/* Centra el formulario de búsqueda y ajusta su tamaño */
+.buscador-container {
+  display: flex;
+  flex-direction: column; /* Los elementos se apilan verticalmente */
+  justify-content: center; /* Centra el contenido a lo largo del eje principal (vertical en este caso) */
+  align-items: center; /* Centra el contenido a lo largo del eje transversal (horizontal en este caso) */
+  min-height: 20vh; /* O la altura que prefieras para que tome toda la altura de la vista */
+  text-align: center; /* Asegura que el texto dentro del contenedor también esté centrado */
+}
+
+/* Estilos específicos para los elementos de Angular Material */
+.mat-form-field {
+  width: 100%; /* Hace que el campo de búsqueda de Angular Material ocupe el ancho del contenedor */
+  font-size: 1.25rem; /* Aumenta el tamaño de la fuente dentro del campo de búsqueda */
+  max-width: 600px;
+}
+
+.mat-form-field .mat-input-element {
+  padding: 20px 0; /* Añade un relleno superior e inferior para hacer que el campo de texto sea más alto */
+}
+
+/* Estilos para el contenedor de resultados y las tarjetas de películas */
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Asegura que las tarjetas estén centradas y distribuidas uniformemente */
+  gap: 20px; /* Añade un espacio entre las tarjetas */
+  padding: 0 10px; /* Añade relleno a los lados si es necesario */
+}
+
+.result-card {
+  width: 300px; /* Establece un ancho fijo para las tarjetas */
+  margin: 10px; /* Añade un margen para crear espacio alrededor de las tarjetas */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+  /* Quita el subrayado de los enlaces y hereda el color del texto */
+.result-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilos para mejorar la apariencia de las tarjetas al pasar el ratón */
+mat-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave para dar profundidad */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Suaviza las transiciones de sombra y transformación */
+}
+
+mat-card:hover {
+  transform: scale(1.03); /* Escala la tarjeta ligeramente para dar un efecto interactivo */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el ratón para dar más profundidad */
+}
+
+/* Centra el texto dentro de las tarjetas y ajusta el tamaño de la fuente */
+mat-card-title,
+mat-card-subtitle,
+mat-card-content {
+  text-align: center;
+}
+
+/* Asegura que las imágenes de las tarjetas ocupen el ancho completo y tengan bordes redondeados */
+.result-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+a {
+  text-decoration: none; /* Esto quita el subrayado de todos los enlaces */
+}

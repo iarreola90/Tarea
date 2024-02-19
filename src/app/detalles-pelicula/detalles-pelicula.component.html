@@ -1,0 +1,6 @@
+<div *ngIf="pelicula">
+    <h2>{{ pelicula.title }}</h2>
+    <img [src]="'https://image.tmdb.org/t/p/w500' + pelicula.poster_path" alt="Póster">
+    <p>{{ pelicula.overview }}</p>
+    <!-- Añade más detalles según prefieras -->
+</div>
